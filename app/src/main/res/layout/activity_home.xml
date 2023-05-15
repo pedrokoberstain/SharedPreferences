@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".Home">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="288dp"
+            android:layout_height="197dp"
+            android:src="@drawable/painelhome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035" />
+
+        <ImageView
+            android:layout_width="53dp"
+            android:layout_height="42dp"
+            android:src="@drawable/logo_kober"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.944" />
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponents"
+            android:layout_width="371dp"
+            android:layout_height="475dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:layout_width="253dp"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="Nome ou e-mail cadastrado"
+            android:inputType="textEmailAddress"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:layout_width="253dp"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/ic_eye"
+            android:hint="Senha"
+            android:inputType="numberPassword"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.16" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_entrar"
+            style="@style/Button"
+            android:layout_width="243dp"
+            android:layout_height="43dp"
+            android:text="@string/entrar"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.417" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_registrar"
+            style="@style/Button"
+            android:layout_width="243dp"
+            android:layout_height="43dp"
+            android:text="@string/registrar"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.582" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="35dp"
+            android:layout_height="27dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/esqueceu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu sua senha ?"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.339" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:src="@drawable/linha_esq"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.738" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="85dp"
+            android:layout_height="28dp"
+            android:src="@drawable/linhadir"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.293"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.731" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="86dp"
+            android:layout_height="20dp"
+            android:text="Entre com"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.737" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="202dp"
+            android:layout_height="35dp"
+            android:src="@drawable/login_alternativo"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents"
+            app:layout_constraintVertical_bias="0.864" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
