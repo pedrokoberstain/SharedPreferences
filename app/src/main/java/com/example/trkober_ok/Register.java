@@ -13,10 +13,8 @@ import android.widget.Toast;
 public class Register extends AppCompatActivity {
 
     //Declarar as variaveis
-    EditText nome, email, renvemail, senha, cpf;
-    Button send;
-
-    TextView txtResultado;
+    EditText ed1,ed2,ed3,ed4,ed5;
+    Button b1;
 
     //Declarar arquivo de preferência
     public static final String MyPREFERENCES = "arquivo";
@@ -26,65 +24,44 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        nome=(EditText) findViewById(R.id.nome);
-        email=(EditText) findViewById(R.id.email);
-        renvemail=(EditText) findViewById(R.id.remail);
-        senha=(EditText) findViewById(R.id.senha);
-        cpf=(EditText) findViewById(R.id.cpf);
-        send=(Button) findViewById(R.id.bt_salvar);
-
         getSupportActionBar().hide();
 
-        //Classe Sharedpreferences
-        SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, 0);
-        //SharedPreferences sharedPreferences = getSharedPreferences("arquivo", 0);
+        ed1=(EditText)findViewById(R.id.nome);
+        ed2=(EditText)findViewById(R.id.email);
+        ed3=(EditText)findViewById(R.id.remail);
+        ed4=(EditText)findViewById(R.id.senha);
+        ed5=(EditText)findViewById(R.id.cpf);
 
-        send.setOnClickListener(new View.OnClickListener() {
+        b1=(Button)findViewById(R.id.bt_salvar);
+
+        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, 0);
+
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //DECLARAÇÃO DE VARIÁVEIS LOCAIS
-                String usuarioLocal = nome.getText().toString();
-                String emailLocal = email.getText().toString();
-                String renvemailLocal = renvemail.getText().toString();
-                String senhaLocal = senha.getText().toString();
-                String cpfLocal = cpf.getText().toString();
+                String nome  = ed1.getText().toString();
+                String email  = ed2.getText().toString();
+                String renvemail  = ed3.getText().toString();
+                String senha  = ed3.getText().toString();
+                String cpf  = ed3.getText().toString();
 
-                // DECLARAÇÃO DO EDITOR - SHAREDPREFERENCES NO MODO DE EDIÇÃO
-                SharedPreferences.Editor editor = sharedPreferences.edit();
+                SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                //FAZER A PERSISTÊNCIA DOS DADOS
-                editor.putString("usuario", usuarioLocal);
-                editor.putString("email", emailLocal);
-                editor.putString("renvemail", renvemailLocal);
-                editor.putString("senha", senhaLocal);
-                editor.putString("cpf", cpfLocal);
-
-                //CONFIRMAR PERSISTÊNCIA
+                editor.putString("Usuario", nome);
+                editor.putString("Email", email);
+                editor.putString("Confirmação do Email", renvemail);
+                editor.putString("Senha", senha);
+                editor.putString("CPF", cpf);
                 editor.commit();
+                Toast.makeText(Register.this,"Dados cadastrados no arquivo .xml com sucesso!!",Toast.LENGTH_LONG).show();
 
-                //NOTIFICAÇÃO NO APP
-                Toast.makeText(Register.this, "Dados Cadastrados no arquivo XML", Toast.LENGTH_LONG).show();
-
-                //LIMPAR FORMULÁRIO
-                nome.getText().clear();
-                email.getText().clear();
-                renvemail.getText().clear();
-                nome.requestFocus();
-                senha.getText().clear();
-                cpf.getText().clear();
-
-                //RECUPERAR OS DADOS SALVOS
-                SharedPreferences preferencia = getSharedPreferences(MyPREFERENCES,0);
-
-                if (preferencia.contains("usuario")){
-                    // RECUPERAR OS DADOS
-                    String usuario = preferencia.getString("usuario", "Olá! Usuário não definido");
-                    txtResultado.setText("Olá " + usuario);
-
-                }else {
-                    txtResultado.setText("Olá! Usuário não definido");
-                }
-
+                //LIMPAR O EDITTEXT
+                ed1.getText().clear();
+                ed2.getText().clear();
+                ed3.getText().clear();
+                ed4.getText().clear();
+                ed5.getText().clear();
+                ed1.requestFocus();
 
             }
         });
