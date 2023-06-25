@@ -7,18 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class TelaPrincipal extends AppCompatActivity {
+public class Disponiveis extends AppCompatActivity {
 
     ImageView home;
     ImageView circulo;
     ImageView mais;
     ImageView mensagem;
     ImageView usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_principal);
-
+        setContentView(R.layout.activity_disponiveis);
         getSupportActionBar().hide();
 
         home = findViewById(R.id.tabbar);

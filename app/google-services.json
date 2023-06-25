@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "713716160154",
+    "project_id": "transportadora-kober",
+    "storage_bucket": "transportadora-kober.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713716160154:android:af612fc69ca99b5486f123",
+        "android_client_info": {
+          "package_name": "com.example.trkober_ok"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713716160154-memvso37iphhe3lt26ip9dfig3klfnqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6ASsA1bgWhI3PekJ5ENDlxQ6OyG8gn44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713716160154-memvso37iphhe3lt26ip9dfig3klfnqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

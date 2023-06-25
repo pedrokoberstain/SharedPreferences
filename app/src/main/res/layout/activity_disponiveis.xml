@@ -7,11 +7,35 @@
     android:background="@color/white"
     tools:context=".TelaPrincipal">
 
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="70px"
+        android:src="@drawable/disponiveis"
+        app:layout_constraintBottom_toTopOf="@+id/bt_transp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabbar2"
+        app:layout_constraintVertical_bias="0.49"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="70px"
+        android:src="@drawable/reload"
+        app:layout_constraintBottom_toTopOf="@+id/bt_transp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/tabbar2"
+        android:contentDescription="TODO" />
+
     <ImageView
         android:id="@+id/tabbar"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/tabbar"
+        android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tabbar1"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +47,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="19dp"
-        android:src="@drawable/tabbar1"
+        android:src="@drawable/circulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tabbar2"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,56 +89,53 @@
 
     <Button
         android:id="@+id/bt_transp"
+        style="@style/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="@color/bluewhite"
         android:padding="20dp"
         android:text="Transportador"
-        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/tabbar2" />
 
     <Button
         android:id="@+id/bt_cliente"
+        style="@style/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="@color/bluewhite"
         android:padding="20dp"
         android:text="Cliente"
-        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/bt_transp" />
 
     <Button
         android:id="@+id/bt_rastre"
+        style="@style/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="@color/bluewhite"
         android:padding="20dp"
         android:text="Rastreamento"
-        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/bt_cliente" />
 
     <Button
+        android:id="@+id/bt_cadastrar_fretes"
+        style="@style/edit_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="@color/bluewhite"
         android:padding="20dp"
         android:text="Cadastrar Fretes"
-        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/bt_rastre" />
 
