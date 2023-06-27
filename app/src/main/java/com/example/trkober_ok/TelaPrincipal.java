@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class TelaPrincipal extends AppCompatActivity {
 
+    private Button bt_cadastro;
+    private Button bt_disponiveis;
+    private Button bt_notafiscal;
     ImageView home;
     ImageView circulo;
     ImageView mais;
@@ -26,6 +30,32 @@ public class TelaPrincipal extends AppCompatActivity {
         mais = findViewById(R.id.tabbar2);
         mensagem = findViewById(R.id.tabbar3);
         usuario = findViewById(R.id.tabbar4);
+        bt_cadastro = findViewById(R.id.bt_transp);
+        bt_disponiveis = findViewById(R.id.bt_cliente);
+        bt_notafiscal = findViewById(R.id.notafiscal);
+
+        bt_notafiscal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NotaFiscal.class);
+                startActivity(intent);
+            }
+        });
+        bt_disponiveis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Disponiveis.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_cadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CadastroFretes.class);
+                startActivity(intent);
+            }
+        });
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
